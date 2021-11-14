@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Color Definitions */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-light-gray);
+    margin: 3rem 0;
+}
+
+section {
+    width: 87%;
+    max-width: 305px;
+    padding: 3rem;
+}
+
+section:nth-child(1) {
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+section:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+
+section:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    margin: 1.5rem 0 1.5rem 0;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 38px;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 1);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: var(--transparent-white);
+}
+
+button {
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    border-style: none;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 50px;
+    padding: 0.85rem 1.75rem;
+    cursor: pointer;
+}
+
+section:nth-child(1) button {
+    color: var(--bright-orange);
+}
+
+section:nth-child(2) button {
+    color: var(--dark-cyan);
+}
+
+section:nth-child(3) button {
+    color: var(--very-dark-cyan);
+}
+
+button:hover, button:focus {
+    color: #fff;
+    background-color: hsla(0, 0%, 100%, 0);
+}
+
+footer {
+    margin: 1rem 0;
+    width: 100vw;
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    font-size: 11px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--very-dark-cyan);
+}
+
+@media (min-width: 1400px) {
+    body {
+        margin: 0;
+        flex-direction: row;
+        align-content: center;
+        height: 100vh;
+    }
+    section:nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+    section:nth-child(3) {
+        border-radius: 0 10px 10px 0;
+    }
+    p {
+        margin-bottom: 5rem;
+    }
+}
